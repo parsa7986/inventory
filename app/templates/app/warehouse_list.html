@@ -1,0 +1,26 @@
+<!-- warehouse_list.html -->
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %}List{% endblock title %}
+
+{% block main-content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Warehouse List</title>
+</head>
+<body>
+    <h1>Warehouse List</h1>
+    <ul>
+        {% for warehouse in warehouses %}
+        <li>
+            <a href="{% url 'warehouse_detail' warehouse.id %}">{{ warehouse.name }} - {{ warehouse.city }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'warehouse_create' %}">Add New Warehouse</a>
+</body>
+</html>
+{% endblock main-content %}

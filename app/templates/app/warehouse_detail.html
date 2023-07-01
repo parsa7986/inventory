@@ -1,0 +1,20 @@
+<!-- warehouse_detail.html -->
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %}Detail{% endblock title %}
+
+{% block main-content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Warehouse Detail</title>
+</head>
+<body>
+    <h1>Warehouse Detail</h1>
+    <h2>{{ warehouse.name }}</h2>
+    <p>City: {{ warehouse.city }}</p>
+</body>
+</html>
+{% endblock main-content %}

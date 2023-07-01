@@ -1,0 +1,23 @@
+<!-- warehouse_create.html -->
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %}Create{% endblock title %}
+
+{% block main-content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Warehouse</title>
+</head>
+<body>
+    <h1>Create Warehouse</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
+{% endblock main-content %}
