@@ -1,0 +1,9 @@
+{
+    "app" : "inventory-parsa",
+    "disks":[
+        {
+            "name": "sqlite",
+            "mountTo": "db"
+        }
+    ]
+}
